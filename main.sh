@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#main.sh [remote-repo-address] [target-directory]
+#main.sh [remote-repo-address] [target-directory] [service-to-restart(apache,apache2, nginx, etc)]
 
 #Clone the remote repo
 git clone $1 clonedRepo
@@ -18,5 +18,6 @@ echo "✅ Moved Repo Folder Contents to Target Directory"
 
 #remove the cloned repo folder which gets everything cleaned up and ready for the next run
 rm -r clonedRepo
+systemctl restart $3
 echo "✅ Opperation Finished Successfully "
 
