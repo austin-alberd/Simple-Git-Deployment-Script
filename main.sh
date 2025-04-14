@@ -10,7 +10,7 @@ rm -r clonedRepo/.git
 echo "Successfully Prepared Repository Folder"
 
 #Move the new contents over
-rm $2/*
+rm -r $2/*
 mv clonedRepo/* $2
 echo "Moved Repo Folder Contents to Target Directory"
 
